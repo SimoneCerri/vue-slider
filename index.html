@@ -13,7 +13,7 @@
 
     <div id="app">
         <div class="container">
-            <div class="slider-wrapper" tabindex="0" @mouseover.stop="setInterval()" @mouseleave="setInterval()">
+            <div class="slider-wrapper" tabindex="0" @mouseover="stop()" @mouseleave="start()">
                 <div class="item">
                     <img :src="slides[currentImage].image" alt="" />
                     <div class="text">

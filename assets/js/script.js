@@ -55,6 +55,14 @@ createApp
             {
                 this.currentImage = 0;
             }
+        },
+        stop()
+        {
+            clearInterval(this.interval)
+        },
+        start()
+        {
+            this.interval
         }
     },
     mounted()
@@ -67,7 +75,7 @@ createApp
             this.currentImage = 0;
             }  
         }, 3000); */
-        setInterval(this.next,3000)
+        this.interval = setInterval(this.next,3000)
     }
 }).mount("#app")
 
