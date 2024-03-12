@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Slider</title>
+    <title>Slider Vue.js</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,23 +19,19 @@
                     <div class="text">
                         <h3>{{slides[currentImage].title}}</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
+                            {{slides[currentImage].text}}
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <img :src="slide.image" alt="" v-for="slide in slides">
+                    <img v-for="slide in slides" :src="slide.image" alt="" >
                     <div class="prev"></div>
                     <div class="next"></div>
                 </div>
 
             </div>
         </div>
-
     </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
