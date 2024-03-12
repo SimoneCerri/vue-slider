@@ -5,6 +5,7 @@ createApp
     data()
     {
         return{
+            hover: false,
             currentImage: 0,
             slides:
             [
@@ -58,11 +59,13 @@ createApp
     },
     mounted()
     {
-        setInterval(() => {
-            this.currentImage++
-            if (this.currentImage === (this).slides.length) {
-                this.currentImage = 0;
-            }
+        setInterval(() => 
+        {
+           this.currentImage++
+            if ((this.currentImage === (this).slides.length) && (this.hover === false))
+            {
+            this.currentImage = 0;
+            }  
         }, 3000);
     }
 }).mount("#app")
