@@ -55,5 +55,15 @@ createApp
                 this.currentImage = 0;
             }
         }
+    },
+    mounted()
+    {
+        setInterval(() => {
+            this.currentImage++
+            if (this.currentImage === (this).slides.length) {
+                this.currentImage = 0;
+            }
+        }, 3000);
     }
 }).mount("#app")
+
