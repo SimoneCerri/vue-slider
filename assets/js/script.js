@@ -59,14 +59,15 @@ createApp
     },
     mounted()
     {
-        setInterval(() => 
+        /* setInterval(() => 
         {
            this.currentImage++
             if ((this.currentImage === (this).slides.length) && (this.hover === false))
             {
             this.currentImage = 0;
             }  
-        }, 3000);
+        }, 3000); */
+        setInterval(this.next,3000)
     }
 }).mount("#app")
 
