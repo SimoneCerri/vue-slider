@@ -35,5 +35,25 @@ createApp
                 }
             ]
         }
+    },
+    methods:
+    {
+        prev()
+        {
+            this.currentImage--
+            //console.log((this).slides.length);
+            if(this.currentImage < 0)
+            {
+                this.currentImage = (this).slides.length - 1;
+            }
+        },
+        next()
+        {
+            this.currentImage++
+            if (this.currentImage === (this).slides.length)
+            {
+                this.currentImage = 0;
+            }
+        }
     }
 }).mount("#app")
