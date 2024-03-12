@@ -62,7 +62,7 @@ createApp
         },
         start()
         {
-            this.interval
+            this.interval = setInterval(this.next, 3000)
         }
     },
     mounted()
